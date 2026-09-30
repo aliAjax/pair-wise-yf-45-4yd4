@@ -32,6 +32,46 @@ export interface Scene {
   locked: boolean;
 }
 
+export interface TalentBlock {
+  id: string;
+  talentId: string;
+  day: string;
+  start: string;
+  end: string;
+  reason?: string;
+}
+
+export type PlanStatus = "待确认" | "已确认待提交" | "写入失败";
+
+export interface RescheduleItem {
+  sceneId: string;
+  kind: "锚点" | "顺延";
+  fromDay: string;
+  fromStart: string;
+  fromEnd: string;
+  toDay: string;
+  toStart: string;
+  toEnd: string;
+}
+
+export interface ReschedulePlan {
+  id: string;
+  anchorSceneId: string;
+  anchorCode: string;
+  requestedDay: string;
+  requestedStart: string;
+  status: PlanStatus;
+  createdAt: string;
+  basisRevision: number;
+  feasible: boolean;
+  items: RescheduleItem[];
+  earliestDay?: string;
+  earliestStart?: string;
+  reasonSceneId?: string;
+  reasonMessage?: string;
+  error?: string;
+}
+
 export interface Conflict {
   id: string;
   type: ConflictType;

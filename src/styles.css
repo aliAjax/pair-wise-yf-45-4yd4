@@ -33,5 +33,30 @@ label.field { display:grid; gap:7px; color:var(--muted); font-size:13px; } label
 .conflict { display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:start; padding:15px; border:1px solid #f2c1b5; border-radius:12px; background:#fff8f5; margin-bottom:10px; } .conflict .seal { padding:7px 9px; border-radius:8px; background:#f25f3a;color:#fff;font-weight:800; }
 .history { display:grid; gap:8px; } .history-row { display:grid; grid-template-columns:150px 120px 1fr; gap:12px; padding:11px 0; border-bottom:1px solid var(--line); font-size:14px; } .muted { color:var(--muted); }
 .draft-banner { padding:12px 14px; border-radius:10px; background:#fff4d8; border:1px solid #efcf83; display:flex; justify-content:space-between; align-items:center; gap:12px; }
-@media(max-width:980px){ .app-shell{grid-template-columns:1fr}.sidebar{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}.network-card{margin:0;width:100%}.grid-2{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)} }
+/* 换场预案 */
+.chain-preview { margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); }
+.chain-preview ol { margin:8px 0 0; padding-left:4px; list-style:none; display:grid; gap:7px; }
+.chain-preview li { display:flex; align-items:center; gap:9px; font-size:14px; }
+.chain-preview li small { margin-left:auto; }
+.anchor-tag,.kind { display:inline-block; padding:2px 8px; border-radius:99px; font-size:12px; font-weight:800; background:#fde7df; color:var(--accent); }
+.kind.顺延 { background:#e8edf4; color:var(--navy); }
+.plan-card { display:grid; gap:12px; }
+.plan-table { width:100%; border-collapse:collapse; font-size:14px; }
+.plan-table th { text-align:left; color:var(--muted); font-weight:600; font-size:12px; padding:6px 8px; border-bottom:1px solid var(--line); }
+.plan-table td { padding:10px 8px; border-bottom:1px solid var(--line); vertical-align:middle; }
+.plan-actions { margin-top:4px; }
+.stale-banner { padding:11px 13px; border-radius:10px; background:#fdecea; border:1px solid #f1b0a8; color:#a33; font-size:13px; }
+.error-banner { padding:11px 13px; border-radius:10px; background:#fdecea; border:1px solid #f1b0a8; color:#a33; font-size:13px; }
+.infeasible { display:grid; gap:8px; padding:14px; border-radius:12px; background:#fbfcfe; border:1px solid var(--line); }
+.infeasible p { margin:0; font-size:14px; }
+.status.待确认 { background:#e7f0fd; color:#1c5db8; }
+.status.已确认待提交 { background:#dff3e8; color:#19704b; }
+.status.写入失败 { background:#fdecea; color:#a33; }
+.block-layout { display:grid; grid-template-columns:minmax(280px,380px) minmax(0,1fr); gap:18px; align-items:start; }
+.block-form { align-content:start; }
+.block-list { display:grid; gap:8px; }
+.block-row { display:grid; grid-template-columns:90px 200px 1fr auto; gap:12px; align-items:center; padding:11px 13px; border:1px solid var(--line); border-radius:11px; background:#fbfcfe; font-size:14px; }
+.simulate { margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); font-size:13px; }
+.simulate input { margin-right:6px; }
+@media(max-width:980px){ .app-shell{grid-template-columns:1fr}.sidebar{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}.network-card{margin:0;width:100%}.grid-2{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.block-layout{grid-template-columns:1fr}.block-row{grid-template-columns:1fr} }
 @media(max-width:680px){ .main{padding:18px}.topbar{align-items:flex-start;flex-direction:column}.scene{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.history-row{grid-template-columns:1fr}.metrics{grid-template-columns:1fr} }
